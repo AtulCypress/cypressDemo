@@ -3,8 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
 
   reporter: 'cypress-mochawesome-reporter',
-  video: true,
-  downloadsFolder: 'cypress/fixtures/cqvTemplateDownload',
+ // video: true,
   reporterOptions: {
     reportDir: 'cypress/reports',
     charts: true,
@@ -24,7 +23,7 @@ module.exports = defineConfig({
 
   env: {
     defaultCommandTimeout: 10000,
-    URL: 'https://calendly.com/login',
+    URL: 'https://calendly.com/app/login',
     username: 'hcltest243@gmail.com',
     password: '@gmail.com',
   },
