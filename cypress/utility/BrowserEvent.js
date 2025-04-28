@@ -8,7 +8,6 @@ class BrowserAction {
     // Force Click on Element
     clickforce(locators) {
         locators.click({ force: true });
-        cy.wait(200);
     }
 
     clickByContains(text) {
@@ -41,7 +40,6 @@ class BrowserAction {
     // Enter & validate text
     typeAndValidate(locators, value) {
         locators.click({ force: true }).type(value).should('have.value', value);
-        cy.wait(500);
     }
 
     // Dropdown selection by value
@@ -62,15 +60,14 @@ class BrowserAction {
     // Drag & Drop
     performDragAndDrop(sourceLocator, targetLocator) {
         sourceLocator.realMouseDown({ position: 'center' }).realMouseMove(15, 0, { position: 'center' });
-        cy.wait(500);
         targetLocator.realMouseMove(0, 0, { position: 'center' }).realMouseUp({ position: 'bottom' });
-        cy.wait(500);
     }
 
     // Verify text within URL
     verifytextWithinURL(text) {
         return cy.url().should('include', text);
     }
+
 }
 
 export default BrowserAction;

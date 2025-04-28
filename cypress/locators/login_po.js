@@ -1,15 +1,9 @@
+
 class LoginPageObjects {
+
 
     getunderstandpopUp() {
         return cy.get('#onetrust-accept-btn-handler')
-    }
-
-    getEmail_txt() {
-        return cy.xpath('//body/div[@id="root"]/div/div/form/div/div/div/div/input')
-    }
-    
-    getpwd_txt() {
-        return cy.xpath('//body/div[@id="root"]/div/div/form/div/div/div/input')
     }
 
     getContinue_btn() {
@@ -21,6 +15,18 @@ class LoginPageObjects {
 
     getLogout() {
         return cy.get('[href="/users/sessions"] > .tswlbdx')
+    }
+
+    getUserNameIcon() {
+        return cy.get('.b72fb0n > span')
+    }
+
+    getEmail_txt() {
+        return cy.xpath('//body/div[@id="root"]/div/div/form/div/div/div/div/input')
+    }
+    
+    getpwd_txt() {
+        return cy.xpath('//body/div[@id="root"]/div/div/form/div/div/div/input')
     }
 
 }

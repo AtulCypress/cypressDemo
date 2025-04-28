@@ -3,20 +3,21 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
 
   reporter: 'cypress-mochawesome-reporter',
- // video: true,
+  video: true,
   reporterOptions: {
     reportDir: 'cypress/reports',
     charts: true,
-    reportPageTitle: 'IPM Automation Report',
+    reportPageTitle: 'Calendly Automation Report',
     videoOnFailOnly: true,
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
-    code: false,
+    code: true,
     screenshotOnRunFailure: true,
     overwrite: true,
     html: true,
     json: true,
+   // video: true,
     screenshotsFolder: "screenshots",
     timestamp: 'mmddyyyy_HHMMss'
   },
@@ -34,9 +35,11 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      testIsolation: false,
+      experimentalStudio: true,
       require('cypress-mochawesome-reporter/plugin')(on);
-
     },
+    projectId: "sks8oc",  // cypress cloud unique project ID
+    specPattern: 'cypress/e2e/*.js',
+    testIsolation: false,
   },
 });
