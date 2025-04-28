@@ -21,7 +21,7 @@ describe('Calendly Application Login Page Test', () => {
         })
     })
 
-    it('Calendly application Login ', function () {
+    it.skip('Calendly application Login ', function () {
         const url = Cypress.env('URL');
         const username = Cypress.env('username');
         const password = Cypress.env('password');

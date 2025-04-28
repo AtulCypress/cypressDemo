@@ -25,8 +25,8 @@ module.exports = defineConfig({
   env: {
     defaultCommandTimeout: 10000,
     URL: 'https://calendly.com/app/login',
-    username: 'hcltest243@gmail.com',
-    password: '@gmail.com',
+    username: 'Email Address',
+    password: 'Password',
   },
   retries: {
     runMode: 1,

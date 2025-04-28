@@ -96,6 +96,11 @@ class Validation {
     checkButtonTextNotPresence(locators) {
         cy.contains('button', locators).should('not.exist');
     }
+
+    // verify the url
+    verifyTextwithUrl(text) {
+        return cy.url().should('include', text);
+    }
 }
 
 export default Validation;

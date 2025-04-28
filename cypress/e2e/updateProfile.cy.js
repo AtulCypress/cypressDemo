@@ -28,6 +28,7 @@ describe('Calendly application Profile update', () => {
         const username = Cypress.env('username');
         const password = Cypress.env('password');
         cy.visit(url);
+        verify.verifyTextwithUrl('calendly.com')
         action.clickforce(login_po.getunderstandpopUp());
         verify.checkElementVisibilityByText("Enter your email to get started.")
         action.type(login_po.getEmail_txt(), username);
