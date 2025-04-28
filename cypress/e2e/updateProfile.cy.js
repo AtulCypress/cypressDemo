@@ -33,7 +33,8 @@ describe('Calendly application Profile update', () => {
         verify.checkElementVisibilityByText("Enter your email to get started.")
         action.type(login_po.getEmail_txt(), username);
         action.clickforce(login_po.getContinue_btn());
-        verify.checkElementVisibilityByText("Enter your password")
+        //  verify.checkElementVisibilityByText("Enter your password")
+        verify.checkElementVisibilityByText(this.data.passwordText) // fixture data fetch
         action.type(login_po.getpwd_txt(), password);
         action.clickforce(login_po.getContinue_btn());
         verify.checkElementPresence1(login_po.getUserNameIcon())
