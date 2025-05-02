@@ -10,7 +10,7 @@ const verify = new Validation()
 const login_po = new LoginPageObjects()
 
 
-describe('Calendly Login Page Test', () => {
+describe('Calendly Login Page Test', { defaultCommandTimeout: 10000 }, () => {
     beforeEach(() => {
         cy.clearCookies();
         cy.viewport(1500, 1000)
@@ -38,7 +38,7 @@ describe('Calendly Login Page Test', () => {
         cy.contains("Enter your password").should('be.visible');
         cy.get('[type="password"]').type(password)
         cy.xpath('//span[normalize-space()="Continue"]').click()
-        cy.get('.b72fb0n > span').should('be.visible');
+        cy.get('.b1b1jjkg > span').should('be.visible');
         // Verify login success
         cy.get('.rZcsCYFux69xpuXhJCVA').click()
         cy.contains("Atul Sharma").should('be.visible');

@@ -18,7 +18,7 @@ class LoginPageObjects {
     }
 
     getUserNameIcon() {
-        return cy.get('.b72fb0n > span')
+        return cy.get('.b1b1jjkg > span')
     }
 
     getEmail_txt() {

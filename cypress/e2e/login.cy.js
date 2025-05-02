@@ -10,7 +10,7 @@ const verify = new Validation()
 const login_po = new LoginPageObjects()
 
 
-describe('Calendly Application Login Page Test', () => {
+describe('Calendly Application Login Page Test', { defaultCommandTimeout: 10000 }, () => {
     beforeEach(() => {
         cy.clearCookies();
         cy.viewport(1500, 1000)
@@ -21,7 +21,7 @@ describe('Calendly Application Login Page Test', () => {
         })
     })
 
-    it.skip('Calendly application Login ', function () {
+    it('Calendly application Login ', function () {
         const url = Cypress.env('URL');
         const username = Cypress.env('username');
         const password = Cypress.env('password');
